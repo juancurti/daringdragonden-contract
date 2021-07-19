@@ -83,8 +83,8 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
             uint256 mintIndex = totalSupply();
             this.approve(msg.sender, mintIndex);
             transferFrom(address(this), msg.sender, mintIndex);
-            sold = sold + 1;
         }
+            sold = sold + _quantityToMint;
     }
     
     function tokenURI(uint256 tokenId)

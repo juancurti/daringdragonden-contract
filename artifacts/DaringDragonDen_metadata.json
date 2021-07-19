@@ -771,11 +771,11 @@
 			]
 		},
 		"DaringDragonDen.sol": {
-			"keccak256": "0x6050aabf37426a4e66686b3b601114b28e60d44f5f33c55dc03815e6303556b3",
+			"keccak256": "0xb18a5a1724169ac7c95f7f03379e92a3a5248bb1a66132c90d67dfe11567b203",
 			"license": "GPL-3.0-or-later",
 			"urls": [
-				"bzz-raw://b709fe71fb9e54c5fcb0dc0b2bee85963cbd99a156fb41629e6a0e155c2275de",
-				"dweb:/ipfs/QmbFNsPdh5M4xVLbYfrqoPgzs7E99oQoN4eHqeL6mFonC2"
+				"bzz-raw://b19164f2689d3dfa4e414c7ed708a7145a9f31f9f9918d19e06f1c0bf7e51563",
+				"dweb:/ipfs/QmUzaguhHhK6EPZEJpz9ALjDS4u7ngWa3GHA6vG2c6Tzob"
 			]
 		}
 	},

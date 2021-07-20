@@ -239,6 +239,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string[]",
+						"name": "_tokenURIs",
+						"type": "string[]"
+					},
+					{
 						"internalType": "uint8",
 						"name": "_quantityToMint",
 						"type": "uint8"
@@ -553,25 +558,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_tokenURI",
-						"type": "string"
-					}
-				],
-				"name": "uploadItem",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "withdraw",
 				"outputs": [],
@@ -771,11 +757,11 @@
 			]
 		},
 		"DaringDragonDen.sol": {
-			"keccak256": "0xb18a5a1724169ac7c95f7f03379e92a3a5248bb1a66132c90d67dfe11567b203",
+			"keccak256": "0x390299fe095b1b1c040176ffbc293496c0fbff278a79c5316e7e4660e01b0e1f",
 			"license": "GPL-3.0-or-later",
 			"urls": [
-				"bzz-raw://b19164f2689d3dfa4e414c7ed708a7145a9f31f9f9918d19e06f1c0bf7e51563",
-				"dweb:/ipfs/QmUzaguhHhK6EPZEJpz9ALjDS4u7ngWa3GHA6vG2c6Tzob"
+				"bzz-raw://4875305e0b39aa97c6d1fe9085096dee2310329f4138f6f879684528ae490a26",
+				"dweb:/ipfs/Qmd7uQ6tZ1P2KifRfzPtFgKsAk9ZkMXbE1my75dA3Y94ck"
 			]
 		}
 	},

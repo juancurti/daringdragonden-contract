@@ -63,7 +63,7 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
     }
 
     // Mint new token(s)
-    function mint(uint8 _quantityToMint) public payable {
+    function mint(string[] memory _tokenURIs, uint8 _quantityToMint) public payable {
         require(isSaleStarted == true, "Sale is not open");
         require(_quantityToMint >= 1, "Must mint at least 1");
         require(
@@ -80,9 +80,13 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
         );
 
         for (uint8 i = 0; i < _quantityToMint; i++) {
-            uint256 mintIndex = totalSupply();
-            this.approve(msg.sender, mintIndex);
-            transferFrom(address(this), msg.sender, mintIndex);
+            _tokenIds.increment();
+
+            uint256 newItemId = _tokenIds.current();
+            _mint(msg.sender, newItemId);
+            _setTokenURI(newItemId, _tokenURIs[i]);
+            approve(address(this), newItemId);
+            transferFrom(msg.sender, address(this), newItemId);
         }
             sold = sold + _quantityToMint;
     }
@@ -94,22 +98,6 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
         returns (string memory)
     {
         return super.tokenURI(tokenId);
-    }
-    
-    function uploadItem(string memory _tokenURI)
-        public onlyOwner
-        returns (uint256)
-    {
-        _tokenIds.increment();
-
-        uint256 newItemId = _tokenIds.current();
-        _mint(msg.sender, newItemId);
-        _setTokenURI(newItemId, _tokenURI);
-        
-        approve(address(this), newItemId);
-        transferFrom(msg.sender, address(this), newItemId);
-        
-        return newItemId;
     }
 
     // Withdraw ether from contract

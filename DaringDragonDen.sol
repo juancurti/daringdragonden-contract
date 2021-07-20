@@ -16,6 +16,10 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
     uint16 public sold = 0;
 
     constructor() ERC721("DaringDragonDen", "DDD") {}
+    
+    function contractURI() public view returns (string memory) {
+        return "https://ipfs.io/ipfs/QmRyAn7m5BYbprTpE1hydDo4NwTQz1nGLgT3FFrjmyYvcJ";
+    }
 
     function _beforeTokenTransfer(
         address from,

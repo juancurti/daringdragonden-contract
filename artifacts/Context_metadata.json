@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"DaringDragonDen_flat.sol": "Context"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"DaringDragonDen_flat.sol": {
+			"keccak256": "0x953ec1c237a239b369b8debce5904a4946af1330371d7bcc670977dece111b75",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://045b01987770eb5fdfdf616ba0d99d57c1c7004f6304749242617f81e09a5735",
+				"dweb:/ipfs/QmNujXUdsdoufmZKtayWZz4vRkob7JubBSua4vVovUXvBs"
+			]
+		}
+	},
+	"version": 1
+}

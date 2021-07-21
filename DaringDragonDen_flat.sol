@@ -1356,7 +1356,7 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
     constructor() ERC721("DaringDragonDen", "DDD") {}
     
     function contractURI() public view returns (string memory) {
-        return "https://ipfs.io/ipfs/QmRyAn7m5BYbprTpE1hydDo4NwTQz1nGLgT3FFrjmyYvcJ";
+        return "https://ipfs.io/ipfs/QmWeeDD3cYYETmquTMUXNBqwjj1PpLPfby5o2b7ZavAAnC";
     }
 
     function _beforeTokenTransfer(
@@ -1403,6 +1403,26 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
     function getCurrentPrice() public pure returns (uint64) {
         return 30_000_000_000_000_000;
     }
+    
+    function adminMint(string[] memory _tokenURIs, uint8 _quantityToMint) public onlyOwner{
+        require(_quantityToMint >= 1, "Must mint at least 1");
+        require(
+            _quantityToMint <= getCurrentMintLimit(),
+            "Maximum current buy limit for individual transaction exceeded"
+        );
+        require(
+            (_quantityToMint + totalSupply()) <= maxSupply,
+            "Exceeds maximum supply"
+        );
+
+        for (uint8 i = 0; i < _quantityToMint; i++) {
+            _tokenIds.increment();
+
+            uint256 newItemId = _tokenIds.current();
+            _mint(msg.sender, newItemId);
+            _setTokenURI(newItemId, _tokenURIs[i]);
+        }
+    }
 
     // Mint new token(s)
     function mint(string[] memory _tokenURIs, uint8 _quantityToMint) public payable {
@@ -1427,8 +1447,6 @@ contract DaringDragonDen is ERC721, ERC721Enumerable,ERC721URIStorage, Ownable {
             uint256 newItemId = _tokenIds.current();
             _mint(msg.sender, newItemId);
             _setTokenURI(newItemId, _tokenURIs[i]);
-            approve(address(this), newItemId);
-            transferFrom(msg.sender, address(this), newItemId);
         }
             sold = sold + _quantityToMint;
     }

@@ -36,11 +36,11 @@
 	},
 	"sources": {
 		"DaringDragonDen_flat.sol": {
-			"keccak256": "0x953ec1c237a239b369b8debce5904a4946af1330371d7bcc670977dece111b75",
+			"keccak256": "0x8f86da64da1cd22bdf5534357d2911a02bfb23e1720914def28b14736e6cc549",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://045b01987770eb5fdfdf616ba0d99d57c1c7004f6304749242617f81e09a5735",
-				"dweb:/ipfs/QmNujXUdsdoufmZKtayWZz4vRkob7JubBSua4vVovUXvBs"
+				"bzz-raw://998600c409f6dec2353d54dda3ac606f353f05e772eb25351a1f63fe2f4ec24e",
+				"dweb:/ipfs/QmaCg1kYD6CsNdt18x5mBELdZjRyxWvAvX3Vi6ChVM4pEu"
 			]
 		}
 	},
